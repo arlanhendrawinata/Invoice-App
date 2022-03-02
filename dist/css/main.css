@@ -1,0 +1,318 @@
+@import url(./config.css);
+
+body {
+  font-family: var(--font-family-sb);
+  font-size: var(--size-s);
+  color: var(--color-black);
+}
+
+.dashboard {
+  width: 100%;
+  height: auto;
+}
+
+/* SIDE BAR */
+.side-bar {
+  width: 15%;
+  height: auto;
+  background-color: var(--color-white);
+}
+
+.logo {
+  width: 100%;
+  height: 7em;
+}
+
+.img-logo {
+  width: 4em;
+}
+
+.side-bar-menu {
+  max-width: 16em;
+  width: 16em;
+}
+
+.menu svg {
+  margin-right: 1em;
+}
+
+.menu,
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin: 1.25em 0;
+  padding: 0.625em;
+  padding-left: 2.5em;
+  /* background-color: antiquewhite; */
+}
+
+.active {
+  /* border-left: 6px solid var(--color-purple); */
+  position: relative;
+}
+.active::before {
+  content: " '";
+  position: absolute;
+  width: 0.313em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-purple);
+  border-radius: 0em 0.625em 0.625em 0em;
+}
+
+/* MENU ACTIVE */
+.active a {
+  color: var(--color-purple);
+}
+
+.active svg {
+  color: var(--color-purple);
+}
+
+.main-content {
+  width: 85%;
+  height: 100%;
+  background-color: var(--color-bg-second);
+}
+
+.head-content {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  /* background-color: antiquewhite; */
+  padding: 2em;
+  display: grid;
+  align-items: center;
+}
+
+label {
+  color: black;
+  margin-right: 2em;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 1em;
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 0.3em;
+  background-color: #f7f8fc;
+  border: 1px solid lightgrey;
+}
+
+option {
+  height: 1em;
+}
+
+input[type="email"] {
+  text-transform: lowercase;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--color-purple);
+}
+
+input[type="number"]:disabled {
+  background-color: rgb(238, 238, 238);
+}
+
+/* button[type="submit"] {
+  padding: 0.7em 3em;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+} */
+
+#invoice_form {
+  grid-template-areas:
+    "invoice_code domain grand-total"
+    "client hosting paid"
+    "status services total"
+    "btn a a";
+}
+
+.finput {
+  margin-right: 3em;
+  margin-bottom: 2em;
+}
+
+.finput-button {
+  grid-area: button;
+  margin-top: 1.155em;
+}
+
+.finput-client {
+  grid-area: client;
+}
+.finput-datetime {
+  grid-area: datetime;
+}
+.finput-services {
+  grid-area: services;
+}
+.finput-domain {
+  grid-area: domain;
+}
+.finput-hosting {
+  grid-area: hosting;
+}
+.finput-grand-total {
+  grid-area: grand-total;
+}
+.finput-paid {
+  grid-area: paid;
+}
+.finput-total {
+  grid-area: total;
+}
+
+.finput-status {
+  grid-area: status;
+}
+
+.finput-invoice_code {
+  grid-area: invoice_code;
+}
+
+.table-content {
+  padding: 2em;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+table {
+  font-family: var(--font-family-r);
+  border-radius: 20px;
+  border-collapse: collapse;
+  min-width: max-content;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+
+thead {
+  background-color: var(--color-purple);
+  color: white;
+}
+
+td,
+th {
+  text-align: left;
+  border: 1px solid lightgray;
+  padding: 1em;
+}
+
+td,
+th {
+  word-wrap: break-word;
+  width: 200px;
+}
+
+.td-name {
+  width: 200px;
+}
+
+.td-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.btn-action {
+  margin: 0 0.5em;
+  padding: 0.7em 3em;
+  background-color: var(--color-purple);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-action:hover {
+  transform: scale(90%);
+}
+
+.hide {
+  display: none;
+}
+
+.alert {
+  display: inline-block;
+  background-color: var(--color-warning);
+  color: white;
+  text-align: left;
+  width: 93%;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+#client_form {
+  grid-template-areas:
+    "client_company name"
+    "client_email client_phone"
+    "client_submit client_reset"
+    "btn a";
+}
+
+.finput-company {
+  grid-area: client_company;
+}
+
+.finput-name {
+  grid-area: name;
+}
+
+.finput-email {
+  grid-area: client_email;
+}
+
+.finput-phone {
+  grid-area: client_phone;
+}
+
+.list-btn {
+  display: flex;
+  flex-direction: row;
+  grid-area: client_submit;
+}
+#domain_form,
+#hosting_form {
+  grid-template-areas:
+    "name"
+    "annual"
+    "extension"
+    "btn";
+}
+
+.finput-annual {
+  grid-area: annual;
+}
+
+.finput-extension {
+  grid-area: extension;
+}
+
+.list-btn {
+  grid-area: btn;
+}
+
+#services_form {
+  grid-template-areas:
+    "name"
+    "price"
+    "btn";
+}
+
+.finput-price {
+  grid-area: price;
+}

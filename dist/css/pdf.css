@@ -1,0 +1,146 @@
+@font-face {
+  font-family: Inter-Regular;
+  src: url(http://localhost/lann/dist/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: Inter-SemiBold;
+  src: url(http://localhost/lann/dist/fonts/Inter-SemiBold.ttf);
+}
+
+:root {
+  --color-background: #f8f7fa;
+  --color-grey: #6f6e70;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter-Regular;
+}
+
+h3 {
+  font-family: Inter-SemiBold;
+  font-weight: 400;
+  font-size: 1.4em;
+  padding: 10px 0;
+}
+
+span {
+  font-family: Inter-Regular;
+  font-size: 1.4em;
+  color: var(--color-grey);
+}
+
+.head-invoice {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 60px;
+  background-color: var(--color-background);
+}
+
+.company-logo img {
+  width: 80px;
+}
+
+.company-logo {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  /* background-color: antiquewhite; */
+}
+
+.invoice-code {
+  width: 50%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.invoice-code-detail {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* .invoice-number {
+  display: flex;
+  flex-direction: column;
+} */
+
+.invoice-bill {
+  display: flex;
+  flex-direction: row;
+  padding: 60px;
+}
+
+.bill-to {
+  width: 50%;
+}
+
+.bill-from {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.bill-from-content {
+  float: right;
+}
+
+.bill-to-item {
+  display: block;
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  padding: 60px;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--color-background);
+}
+
+th {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: Inter-SemiBold;
+  font-size: 1.2em;
+  /* background-color: var(--color-background);*/
+  padding: 40px 0;
+}
+
+td {
+  padding: 40px 0;
+}
+
+td {
+  text-align: left;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  padding-left: 60px;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  padding-right: 60px;
+}
+
+.divider {
+  border-top: 1px solid var(--color-grey);
+}

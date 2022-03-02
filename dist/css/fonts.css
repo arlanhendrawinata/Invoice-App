@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Gilmer-Bold;
+  src: url(../fonts/Gilmer\ Bold.ttf);
+}
+
+:root {
+  /* ============== FONT FAMILY ============== */
+  --font-family-r: Poppins-Regular;
+  --font-family-sb: Poppins-SemiBold;
+  --font-family-logo: Gilmer-Bold;
+
+  /* ============== FONT SIZES ============== */
+  --size-s: 0.8em;
+  --size-r: 1.125em;
+  --size-m: 1.5em;
+  --size-l: 1.625em;
+  --size-b: 2.875em;
+}
